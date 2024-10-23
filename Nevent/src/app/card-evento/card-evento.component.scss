@@ -1,0 +1,22 @@
+.event-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-details {
+  padding: 1px;
+}
+
+.event-details p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #ccc;
+}

@@ -1,4 +1,37 @@
-<ion-content [fullscreen]="true">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
 
+    <ion-buttons slot="end">
+      <ion-button *ngIf="mostrarMensajes">
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-top">
+
+  <ion-title>{{event.name}}</ion-title>
+
+  <img [src]="event.image" class="img-full" />
+
+  <div class="ion-padding">
+    <div class="ion-padding-horizontal event-info">
+      <p class="ion-no-padding ion-no-margin">{{event.date}}</p>
+      <p class="ion-no-padding  ion-no-margin">{{event.time}}</p>
+      <ion-row class="ion-no-padding">
+        <ion-col>
+          <p>{{event.location}}</p>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" fill="outline" >Mapa</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <p class="event-text ion-no-margin">{{event.description}}</p>
+  </div>
 
 </ion-content>

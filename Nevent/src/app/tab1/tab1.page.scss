@@ -1,0 +1,56 @@
+.hours-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.hour {
+  font-size: 1.2rem;
+  color: white;
+  margin: 20px 0;
+
+}
+
+.table-events{
+  margin-top: 5%;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ion-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.ion-table th,
+.ion-table td {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.events-column{
+  padding: 5px;
+  background-color: #1D1D1D;
+  margin-right: 3px;
+}
+
+.ion-table th {
+  color: white;
+}
+
+.sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  color: white;
+  border-right: 1px solid #ddd;
+  background-color: #0B0B0B;
+}

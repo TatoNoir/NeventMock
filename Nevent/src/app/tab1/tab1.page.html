@@ -1,6 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botón de retroceso -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <!-- Botón de mensajes, que puedes mostrar o esconder -->
+    <ion-buttons slot="end">
+      <ion-button *ngIf="mostrarMensajes">
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
 
+  <ion-title>Programación</ion-title>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round" fill="outline" class="ion-no-margin custom-button" [class.selected]="selectedDate === '4/8'"
+          (click)="selectDate('4/8')">Mie, 4/8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="round" fill="outline" class="ion-no-margin custom-button" [class.selected]="selectedDate === '5/8'"
+          (click)="selectDate('5/8')">Jue, 5/8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="round" fill="outline" class="ion-no-margin custom-button" [class.selected]="selectedDate === '6/8'"
+          (click)="selectDate('6/8')">Vie, 6/8</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-content style="--padding-top:20px">
+    <div class="table-container">
+      <table class="ion-table">
+        <thead>
+          <tr>
+            <th class="sticky-col"></th>
+            <th class="events-column">Ágora</th>
+            <th class="events-column">Electro</th>
+            <th class="events-column">Electro</th>
+            <th class="events-column">Electro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of schedule">
+            <td class="sticky-col">{{ event.hour }}</td>
+            <td class="events-column">
+              <app-card-evento *ngIf="event.agora.background" [background]="event.agora.background"
+                [nombre]="event.agora.nombre" [horario]="event.agora.horario">
+              </app-card-evento>
+            </td>
+
+            <td class="events-column">
+              <app-card-evento *ngIf="event.electro.background" [background]="event.electro.background"
+                [nombre]="event.electro.nombre" [horario]="event.electro.horario">
+              </app-card-evento>
+            </td>
+
+            <td class="events-column">
+              <app-card-evento *ngIf="event.electro.background" [background]="event.electro.background"
+                [nombre]="event.electro.nombre" [horario]="event.electro.horario">
+              </app-card-evento>
+            </td>
+
+            <td class="events-column">
+              <app-card-evento *ngIf="event.electro.background" [background]="event.electro.background"
+                [nombre]="event.electro.nombre" [horario]="event.electro.horario">
+              </app-card-evento>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-content>
 
 </ion-content>

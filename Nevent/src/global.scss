@@ -36,8 +36,13 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
-:root {
-  --ion-color-dark: #0B0B0B;
+
+
+body {
+  --ion-font-family: 'Poppins', sans-serif;
+  --ion-background-color: #0B0B0B;
+  --ion-tab-bar-background: #0B0B0B;
+  --ion-toolbar-background: #0B0B0B;
 }
 
 ion-header{
@@ -45,16 +50,46 @@ ion-header{
 }
 
 ion-toolbar {
-  --background: #0B0B0B;
   border: none;
 }
 
 ion-tab-bar {
-  --background: #0B0B0B;
   border: none;
 }
 
+.custom-button {
+  --background: transparent;
+  --border-width: 1px;
+  border-image: linear-gradient(to right, #ff007f, #007bff) 1;
+  color: white;
+  padding: 0;
+  font-weight: bold;
+
+  &.selected {
+    --background: linear-gradient(to right, #ff007f, #007bff);
+    --background-activated: linear-gradient(to right, #ff007f, #007bff);
+    color: white;
+  }
+}
+
 ion-content {
-  --background: #0B0B0B;
   border: none;
+}
+
+ion-card-header{
+  --color: #fff;
+  --background: #0B0B0B;
+}
+
+ion-card-content{
+  --color: #fff;
+  --background: #0B0B0B;
+}
+
+ion-text{
+  font-size: 0.9rem;
+}
+
+h4{
+  font-size: 1.2rem;
 }
