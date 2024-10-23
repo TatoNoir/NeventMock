@@ -36,4 +36,25 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
+:root {
+  --ion-color-dark: #0B0B0B;
+}
 
+ion-header{
+  box-shadow: none !important;
+}
+
+ion-toolbar {
+  --background: #0B0B0B;
+  border: none;
+}
+
+ion-tab-bar {
+  --background: #0B0B0B;
+  border: none;
+}
+
+ion-content {
+  --background: #0B0B0B;
+  border: none;
+}
