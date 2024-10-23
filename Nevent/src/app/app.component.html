@@ -1,3 +1,17 @@
 <ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <!-- Botón de retroceso -->
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <!-- Botón de mensajes, que puedes mostrar o esconder -->
+      <ion-buttons slot="end">
+        <ion-button *ngIf="mostrarMensajes">
+          <ion-icon name="paper-plane"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
